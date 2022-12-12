@@ -21,8 +21,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
 import { ConfirmdialogComponent } from './confirmdialog/confirmdialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
-
-
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
 
 
 @NgModule({
@@ -50,8 +50,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatNativeDateModule,
     MatRadioModule,
     ReactiveFormsModule,
-    MatDialogModule
-    
+    MatDialogModule,
+    MatSidenavModule,
+    MatListModule
     
   ],
   providers: [],

@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { LoginDetail } from '../models/LoginDetail';
+import { users } from '../models/users';
 
 @Injectable({
   providedIn: 'root'
@@ -22,8 +23,8 @@ this.http.post('http://localhost:8080/user/register', registerForm.value)
 }
 
 
-login(loginDetails:LoginDetail){
- return this.http.post('http://localhost:8080/user/login', loginDetails);
+login(loginDetails:LoginDetail):Observable<users>{
+ return this.http.post<users>('http://localhost:8080/user/login', loginDetails);
       
   }
   

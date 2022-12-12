@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginDetail } from '../models/LoginDetail';
+import { users } from '../models/users';
 import { AuthService } from '../services/auth.service';
 
 
@@ -13,6 +14,7 @@ import { AuthService } from '../services/auth.service';
 export class LoginComponent {
 
   loginDetail = new LoginDetail();
+  User=new users();
   submitted = false;
   isLoginFailed=false;
   isLoggedIn=false;
@@ -33,18 +35,26 @@ export class LoginComponent {
 
     this.authService.login(this.loginDetail).subscribe({
       next: data => {
-        if(data > 0){
+        
+        this.User=data;
+        console.log('Response '+this.User.username);
+        console.log('Response '+this.User.password);
+        console.log('Response '+this.User.type);
+        console.log('Response '+this.User.active);
+        console.log('Response '+this.User.displayname);
+
+        if(this.User.type==1){
           this.isLoginFailed = false;
           this.isLoggedIn = true;
           //this.reloadPage();
           this.router.navigate(['doctor-dashboard']);
         }
 
-        if(data==-1){
+        // if(data==-1){
 
-          this.errorMessage="Invalid username or password"
-          this.isLoginFailed = true;
-        }
+        //   this.errorMessage="Invalid username or password"
+        //   this.isLoginFailed = true;
+        // }
       },
       error: err => {
         this.errorMessage = err.error.message;
