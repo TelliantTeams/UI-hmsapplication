@@ -1,0 +1,51 @@
+<h2>DashBoard- Admin</h2>
+<hr color="white">
+<hr color="white">
+<div fxLayout="row" fxLayoutGap="12px" [style.margin-top]="'12px'">
+
+    <mat-card>
+        <mat-list>
+            <mat-list-item>
+                <strong>Total Patients</strong>
+                <hr>
+            </mat-list-item>
+            <mat-list-item>
+                <h1>{{pcount}}</h1>
+            </mat-list-item>
+        </mat-list>
+    </mat-card>
+    <mat-card>
+        <mat-list>
+            <mat-list-item>
+                <strong>Total Doctors</strong>
+                <hr>
+            </mat-list-item>
+            <mat-list-item>
+                <h1>{{dcount}}</h1>
+            </mat-list-item>
+        </mat-list>
+    </mat-card>
+    <mat-card>
+        <mat-list>
+            <mat-list-item>
+                <strong>Today Appointments</strong>
+                <hr>
+            </mat-list-item>
+            <mat-list-item>
+                <h1>{{apps?.length}}</h1>
+            </mat-list-item>
+        </mat-list>
+    </mat-card>
+    <mat-card>
+        <mat-list>
+            <mat-list-item>
+                <strong>Appointment Requests</strong>
+                <hr>
+            </mat-list-item>
+            <mat-list-item>
+                <h1>{{papps?.length}}</h1>
+            </mat-list-item>
+        </mat-list>
+    </mat-card>
+</div>
+
