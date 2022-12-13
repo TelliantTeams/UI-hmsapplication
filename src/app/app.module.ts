@@ -23,6 +23,8 @@ import { ConfirmdialogComponent } from './confirmdialog/confirmdialog.component'
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { AdminDasboardStatComponent } from './admin-dasboard-stat/admin-dasboard-stat.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import {MatListModule} from '@angular/material/list';
     LoginComponent,
     RegisterComponent,
     DoctorDashboardComponent,
-    ConfirmdialogComponent
+    ConfirmdialogComponent,
+    AdminDashboardComponent,
+    AdminDasboardStatComponent
   ],
   imports: [
     BrowserModule,
