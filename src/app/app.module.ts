@@ -45,7 +45,7 @@ import { AdminDasboardStatComponent } from './admin-dasboard-stat/admin-dasboard
     ConfirmdialogComponent,
     ProfileComponent,
     DoctorViewAppointmentComponent,
-    DoctorViewDashboardComponent
+    DoctorViewDashboardComponent,
     AdminDashboardComponent,
     AdminDasboardStatComponent
   ],

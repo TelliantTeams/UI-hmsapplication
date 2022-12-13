@@ -14,7 +14,6 @@ import { RegisterComponent } from './register/register.component';
 const routes: Routes = [
   {path :'',component:LoginComponent},
   {path :'register',component :RegisterComponent},
-<<<<<<< HEAD
   {path :'doctor-dashboard',component :DoctorDashboardComponent,
   children: [
     {path :'profile',component :ProfileComponent},
@@ -23,12 +22,10 @@ const routes: Routes = [
   ]
 },
   
-=======
   {path :'doctor-dashboard',component :DoctorDashboardComponent},
   {path :'admin-dashboard',component:AdminDashboardComponent},
   {path :'admin-dashboard-stat',component:AdminDasboardStatComponent}
 
->>>>>>> f5618a889eb74b0d9a860114c4d9157309789d4e
 
 ];
 
