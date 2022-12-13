@@ -23,6 +23,15 @@ import { ConfirmdialogComponent } from './confirmdialog/confirmdialog.component'
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
+import { ProfileComponent } from './profile/profile.component';
+import { DoctorViewAppointmentComponent } from './doctor-view-appointment/doctor-view-appointment.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { DoctorViewDashboardComponent } from './doctor-view-dashboard/doctor-view-dashboard.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+
+
+
 
 
 @NgModule({
@@ -31,7 +40,10 @@ import {MatListModule} from '@angular/material/list';
     LoginComponent,
     RegisterComponent,
     DoctorDashboardComponent,
-    ConfirmdialogComponent
+    ConfirmdialogComponent,
+    ProfileComponent,
+    DoctorViewAppointmentComponent,
+    DoctorViewDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +64,11 @@ import {MatListModule} from '@angular/material/list';
     ReactiveFormsModule,
     MatDialogModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatGridListModule
+
     
   ],
   providers: [],

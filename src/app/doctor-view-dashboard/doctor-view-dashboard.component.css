@@ -1,0 +1,9 @@
+
+.example-card {
+    width: 350px;
+    height: 100px;
+    margin: 50px;
+    float: left;
+    background-color:cornflowerblue;
+    color: white;
+}

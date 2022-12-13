@@ -37,11 +37,6 @@ export class LoginComponent {
       next: data => {
         
         this.User=data;
-        console.log('Response '+this.User.username);
-        console.log('Response '+this.User.password);
-        console.log('Response '+this.User.type);
-        console.log('Response '+this.User.active);
-        console.log('Response '+this.User.displayname);
 
         if(this.User.type==1){
           this.isLoginFailed = false;
@@ -49,13 +44,7 @@ export class LoginComponent {
           //this.reloadPage();
           this.router.navigate(['doctor-dashboard']);
         }
-
-        // if(data==-1){
-
-        //   this.errorMessage="Invalid username or password"
-        //   this.isLoginFailed = true;
-        // }
-      },
+     },
       error: err => {
         this.errorMessage = err.error.message;
         this.isLoginFailed = true;
