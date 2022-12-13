@@ -23,7 +23,6 @@ import { ConfirmdialogComponent } from './confirmdialog/confirmdialog.component'
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
-<<<<<<< HEAD
 import { ProfileComponent } from './profile/profile.component';
 import { DoctorViewAppointmentComponent } from './doctor-view-appointment/doctor-view-appointment.component';
 import {MatTableModule} from '@angular/material/table';
@@ -33,10 +32,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
-=======
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { AdminDasboardStatComponent } from './admin-dasboard-stat/admin-dasboard-stat.component';
->>>>>>> f5618a889eb74b0d9a860114c4d9157309789d4e
 
 
 @NgModule({
@@ -46,14 +43,11 @@ import { AdminDasboardStatComponent } from './admin-dasboard-stat/admin-dasboard
     RegisterComponent,
     DoctorDashboardComponent,
     ConfirmdialogComponent,
-<<<<<<< HEAD
     ProfileComponent,
     DoctorViewAppointmentComponent,
     DoctorViewDashboardComponent
-=======
     AdminDashboardComponent,
     AdminDasboardStatComponent
->>>>>>> f5618a889eb74b0d9a860114c4d9157309789d4e
   ],
   imports: [
     BrowserModule,
