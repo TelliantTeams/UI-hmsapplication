@@ -1,0 +1,8 @@
+.f-auto{
+    flex: 1 1 auto;
+}
+
+.mat-sidenav a:hover{
+    background-color:aliceblue;
+    
+}

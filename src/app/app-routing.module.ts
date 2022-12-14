@@ -1,11 +1,12 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminDasboardStatComponent } from './admin-dasboard-stat/admin-dasboard-stat.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { AdminViewDashboardComponent } from './admin-view-dashboard/admin-view-dashboard.component';
 import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
 import { DoctorViewAppointmentComponent } from './doctor-view-appointment/doctor-view-appointment.component';
 import { DoctorViewDashboardComponent } from './doctor-view-dashboard/doctor-view-dashboard.component';
 import { LoginComponent } from './login/login.component';
+import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 
@@ -21,11 +22,19 @@ const routes: Routes = [
     {path :'dashboard',component :DoctorViewDashboardComponent}
   ]
 },
-  
-  {path :'doctor-dashboard',component :DoctorDashboardComponent},
-  {path :'admin-dashboard',component:AdminDashboardComponent},
-  {path :'admin-dashboard-stat',component:AdminDasboardStatComponent}
+  {path :'admin-dashboard',component :AdminDashboardComponent,
+  children: [
+    {path :'dashboard',component :AdminViewDashboardComponent}
+  ]
+}, 
+  {path :'patient-dashboard',component :PatientDashboardComponent,
+  children: [
+ 
+  ]
+},
 
+  {path :'doctor-dashboard',component :DoctorDashboardComponent},
+  {path :'admin-dashboard',component:AdminDashboardComponent}
 
 ];
 
