@@ -3,6 +3,9 @@ import { FormControl, NgForm } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 import { ThemePalette } from '@angular/material/core';  
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { users } from '../models/users';
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmdialogComponent } from '../confirmdialog/confirmdialog.component';
 
 
 
@@ -15,8 +18,9 @@ export class RegisterComponent {
 
   color: ThemePalette = "primary";
   submitted = false;
+  User=new users();
 
-  constructor(private authService: AuthService,public builder: FormBuilder) { }
+  constructor(private authService: AuthService,public builder: FormBuilder,public dialog:MatDialog) { }
 
   registerForm=this.builder.group({
     username: ['',[Validators.required,Validators.pattern('^[_A-z0-9]*((-|s)*[_A-z0-9])*$')]],
@@ -32,23 +36,22 @@ export class RegisterComponent {
     return this.registerForm.controls;
   }
 
-
-
-
-  // public register(registerForm:NgForm) {
-
-  //  this.authService.registration(registerForm);
-  
-
-  // }
-
   onSubmit(){
     this.submitted=true;
     if (!this.registerForm.valid) {
-      alert('Please fill all the required fields to create a super hero!');
-      return false;
+      alert('Please fill all the required fields !');
+    
     } else {
-      return console.log(this.registerForm.value);
+      this.authService.registration(this.registerForm).subscribe(res => {
+        this.registerForm.reset();
+        this.User=res;
+        console.log(this.User.displayname);
+          const dialogRef = this.dialog.open(ConfirmdialogComponent, {
+            width: '350px',
+            data: { name: this.User.displayname }
+          });         
+     })
+
     }
   }
 

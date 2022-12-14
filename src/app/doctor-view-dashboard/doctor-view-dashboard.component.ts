@@ -9,6 +9,8 @@ import {MatDialog} from '@angular/material/dialog';
 })
 export class DoctorViewDashboardComponent {
 
+  myDate = new Date(); 
+
 constructor(public dialog:MatDialog){}
 
     openDialog() {

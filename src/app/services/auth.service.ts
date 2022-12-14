@@ -15,11 +15,9 @@ export class AuthService {
   constructor(private http:HttpClient,private router : Router) { }
 
 
-public registration(registerForm:NgForm){
-this.http.post('http://localhost:8080/user/register', registerForm.value)
-      .subscribe(res => {
-         console.log('inside postmehtod of sub.function', res);//only objects
-      })
+public registration(registerForm:any){
+  return this.http.post<users>('http://localhost:8080/user/register', registerForm.value);
+      
 }
 
 
