@@ -33,7 +33,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 
 
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-import { AdminDasboardStatComponent } from './admin-dasboard-stat/admin-dasboard-stat.component';
+import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
+import { PatientViewDashboardComponent } from './patient-view-dashboard/patient-view-dashboard.component';
+import { AdminViewDashboardComponent } from './admin-view-dashboard/admin-view-dashboard.component';
 
 
 @NgModule({
@@ -47,7 +49,9 @@ import { AdminDasboardStatComponent } from './admin-dasboard-stat/admin-dasboard
     DoctorViewAppointmentComponent,
     DoctorViewDashboardComponent,
     AdminDashboardComponent,
-    AdminDasboardStatComponent
+    PatientDashboardComponent,
+    PatientViewDashboardComponent,
+    AdminViewDashboardComponent
   ],
   imports: [
     BrowserModule,

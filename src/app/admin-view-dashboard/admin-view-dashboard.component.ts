@@ -3,11 +3,11 @@ import { ApiService } from '../api.service';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-admin-dasboard-stat',
-  templateUrl: './admin-dasboard-stat.component.html',
-  styleUrls: ['./admin-dasboard-stat.component.css']
+  selector: 'app-admin-view-dashboard',
+  templateUrl: './admin-view-dashboard.component.html',
+  styleUrls: ['./admin-view-dashboard.component.css']
 })
-export class AdminDasboardStatComponent implements OnInit{
+export class AdminViewDashboardComponent implements OnInit{
 
   constructor(private apiservice:ApiService,private http:HttpClient){}
 
@@ -54,7 +54,4 @@ export class AdminDasboardStatComponent implements OnInit{
     });
   }
 
-
-
-  
 }
