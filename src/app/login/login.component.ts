@@ -44,6 +44,12 @@ export class LoginComponent {
           //this.reloadPage();
           this.router.navigate(['doctor-dashboard']);
         }
+        if(this.User.type==2){
+          this.isLoginFailed = false;
+          this.isLoggedIn = true;
+          //this.reloadPage();
+          this.router.navigate(['patient-dashboard']);
+        }
      },
       error: err => {
         this.errorMessage = err.error.message;
