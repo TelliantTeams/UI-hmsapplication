@@ -47,7 +47,6 @@ export class RegisterComponent {
         this.User=res;
         console.log(this.User.displayname);
           const dialogRef = this.dialog.open(ConfirmdialogComponent, {
-            width: '350px',
             data: { name: this.User.displayname }
           });         
      })
