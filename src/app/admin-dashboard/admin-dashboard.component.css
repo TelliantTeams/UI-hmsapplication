@@ -2,6 +2,24 @@
     flex: 1 1 auto;
 }
 
-.mat-sidenav a:hover{
+.mat-sidenav a:hover .active{
     background-color:aliceblue;  
 }
+
+.active {
+    color: Black;
+    font-weight: bold!important;
+    text-decoration: none;
+    
+}
+
+a{
+    text-decoration: none;
+    font: 400 16px/24px Roboto, sans-serif;
+    letter-spacing: .03125em;
+}
+
+
+
+
+  

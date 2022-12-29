@@ -1,0 +1,39 @@
+.close-button{
+    float: right;
+    
+  }
+
+.main-div{
+    padding: 0px;
+   
+}
+
+.appointment-form{
+    padding: 20px;
+    
+}
+
+.my-app-form-field .mat-app-form-field-wrapper {
+    margin-bottom: -1.25%;
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  .mat-mdc-dialog-container .mdc-dialog__surface{
+    box-shadow: none !important;
+    background-color: transparent  !important;
+}

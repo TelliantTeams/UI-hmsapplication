@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { HttpClient } from '@angular/common/http';
+import { MatDialog } from '@angular/material/dialog';
+import { AdminViewBookingformComponent } from '../admin-view-bookingform/admin-view-bookingform.component';
 
 @Component({
   selector: 'app-admin-view-dashboard',
@@ -8,8 +10,9 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./admin-view-dashboard.component.css']
 })
 export class AdminViewDashboardComponent implements OnInit{
+  router: any;
 
-  constructor(private apiservice:ApiService,private http:HttpClient){}
+  constructor(private apiservice:ApiService,private http:HttpClient,public dialog:MatDialog){}
 
   dcount: any;
   pcount:any;
@@ -53,5 +56,11 @@ export class AdminViewDashboardComponent implements OnInit{
       this.papps = response;
     });
   }
+
+  openForm(){
+    this.dialog.open(AdminViewBookingformComponent,{width:'100%'});
+
+  }
+
 
 }

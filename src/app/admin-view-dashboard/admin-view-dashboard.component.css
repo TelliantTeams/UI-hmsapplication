@@ -6,3 +6,48 @@ mat-card{
     text-align: center;
     border-radius: 25px;
 }
+
+.blink{
+    animation: blinker 0.3s linear infinite;
+    color: #fcfcfc;
+    
+   
+}
+
+.mat-mdc-dialog-container .mdc-dialog__surface{
+    box-shadow: none !important;
+    background-color: transparent  !important;
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 50%;
+    }
+  }
+
+  .example-card {
+    width:  230px;
+    height: 125px;
+    margin: 50px;
+    float: left;
+    background-color:cornflowerblue;
+    color: white;
+}
+
+.example-card1 {
+    width: 230px;
+    height: 125px;
+    margin: 50px;
+    float: left;
+    background-color:cornflowerblue;
+    color: white;
+  
+}
+
+.tda{
+    font-size: 17px;
+}
+
+.ard{
+    font-size: 15.5px;
+}

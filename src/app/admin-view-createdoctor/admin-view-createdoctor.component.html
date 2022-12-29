@@ -1,0 +1,98 @@
+<!-- <button mat-icon-button class="close-button" [mat-dialog-close]="true">
+    <mat-icon class="close-icon" color="warn">close</mat-icon>
+</button> -->
+
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+
+    <mat-card fxFlex="70" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+        <mat-toolbar color="primary" style="justify-content:center; ">Create Doctor Form</mat-toolbar>
+        <br><br>
+
+        <form [formGroup]="newdoctorForm" #newdoctorFrom fxLayoutAlign="stretch" fxLayout="column"
+            class="appointment-form">
+
+            <div class="col-md-6" fxLayout="row" style="gap: 10px;">
+                <mat-form-field appearance="outline" style="margin-bottom: -1.25em">
+                    <mat-label>UserName</mat-label>
+                    <input matInput placeholder="Enter UserName" name="username" formControlName="username">
+                </mat-form-field>
+                <span style="color: red; font-size:small; font-style: italic; margin-left: 10px;"
+                    *ngIf="(mynewdoctorForm.username.touched || submitted) && mynewdoctorForm.username.errors?.['required']">
+                    *Username is mandatory
+                </span>
+                <br>
+
+
+                <mat-form-field appearance="outline" style="margin-bottom: -1.25em">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Enter Password" name="password" formControlName="password">
+                </mat-form-field>
+                <span style="color: red; font-size:small; font-style: italic; margin-left: 10px;"
+                    *ngIf="(mynewdoctorForm.password.touched || submitted) && mynewdoctorForm.password.errors?.['required']">
+                    *Password is mandatory
+                </span>
+
+            </div>
+             <br>
+            <div class="col-md-6" fxLayout="row" style="gap: 10px;">
+
+                <mat-form-field appearance="outline" style="margin-bottom: -1.25em">
+                    <mat-label>Age</mat-label>
+                    <input matInput placeholder="age" name="age" formControlName="age">
+                </mat-form-field>
+                <span style="color: red; font-size:small; font-style: italic; margin-left: 10px;"
+                    *ngIf="(mynewdoctorForm.age.touched || submitted) && mynewdoctorForm.age.errors?.['required']">
+                    *Age is mandatory
+                </span>
+                <br>
+                <mat-form-field appearance="outline" style="margin-bottom: -1.25em">
+                    <mat-label>Mail</mat-label>
+                    <input matInput placeholder="mail" name="mail" formControlName="mail">
+                </mat-form-field>
+                <span style="color: red; font-size:small; font-style: italic; margin-left: 10px;"
+                    *ngIf="(mynewdoctorForm.mail.touched || submitted) && mynewdoctorForm.mail.errors?.['required']">
+                    *Mail is mandatory
+                </span>
+            </div>
+            <br>
+            <div class="col-md-6" fxLayout="row" style="gap: 10px;">
+                <mat-form-field appearance="outline" style="margin-bottom: -1.25em">
+                    <mat-label>Qualification</mat-label>
+                    <input matInput placeholder="qualification" name="qualification" formControlName="qualification">
+                </mat-form-field>
+                <span style="color: red; font-size:small; font-style: italic; margin-left: 10px;"
+                    *ngIf="(mynewdoctorForm.address.touched || submitted) && mynewdoctorForm.address.errors?.['required']">
+                    *Qualification is mandatory
+                </span>
+                <br>
+
+                <mat-form-field appearance="outline" style="margin-bottom: -1.25em">
+                    <mat-label>ContactNumber</mat-label>
+                    <input matInput placeholder="contact" name="contact" formControlName="contact">
+                </mat-form-field>
+                <span style="color: red; font-size:small; font-style: italic; margin-left: 10px;"
+                    *ngIf="(mynewdoctorForm.contact.touched || submitted) && mynewdoctorForm.contact.errors?.['required']">
+                    *ContactNumber is mandatory
+                </span>
+            </div>
+            <br>
+            <mat-form-field appearance="outline" style="margin-bottom: -1.25em">
+                <mat-label>Address</mat-label>
+                <input matInput placeholder="address" name="address" formControlName="address">
+            </mat-form-field>
+            <span style="color: red; font-size:small; font-style: italic; margin-left: 10px;"
+                *ngIf="(mynewdoctorForm.address.touched || submitted) && mynewdoctorForm.address.errors?.['required']">
+                *Address is mandatory
+            </span>
+            <br>
+        </form>
+        <hr>
+
+        <div class="button">
+            <button mat-raised-button color="primary" type="submit" mat-dialog-close (click)="onSubmit()">REGISTER</button>
+            <button mat-raised-button color="warn" mat-dialog-close (click)="clearForm()">RESET</button>
+        </div>
+        <br>
+    </mat-card>
+
+</div>

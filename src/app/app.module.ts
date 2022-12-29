@@ -29,13 +29,26 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { DoctorViewDashboardComponent } from './doctor-view-dashboard/doctor-view-dashboard.component';
 import {MatGridListModule} from '@angular/material/grid-list';
-
+import {MatChipsModule} from '@angular/material/chips';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
 import { PatientViewDashboardComponent } from './patient-view-dashboard/patient-view-dashboard.component';
 import { AdminViewDashboardComponent } from './admin-view-dashboard/admin-view-dashboard.component';
+import { AdminViewAppointmentrequestsComponent } from './admin-view-appointmentrequests/admin-view-appointmentrequests.component';
+import { AdminViewApprovedrequestsComponent } from './admin-view-approvedrequests/admin-view-approvedrequests.component';
+import { AdminViewTodayappComponent } from './admin-view-todayapp/admin-view-todayapp.component';
+import { AdminViewDoctorComponent } from './admin-view-doctor/admin-view-doctor.component';
+import { AdminViewPatientComponent } from './admin-view-patient/admin-view-patient.component';
+import { AdminViewBookingformComponent } from './admin-view-bookingform/admin-view-bookingform.component';
+import { AdminViewCreatepatientComponent } from './admin-view-createpatient/admin-view-createpatient.component';
+import { AdminViewCreatedoctorComponent } from './admin-view-createdoctor/admin-view-createdoctor.component';
+import { AdminViewEditdoctorComponent } from './admin-view-editdoctor/admin-view-editdoctor.component';
+import { AdminViewEditpatientComponent } from './admin-view-editpatient/admin-view-editpatient.component';
+import { AdminViewRescheduleComponent } from './admin-view-reschedule/admin-view-reschedule.component';
+
 
 
 @NgModule({
@@ -51,7 +64,18 @@ import { AdminViewDashboardComponent } from './admin-view-dashboard/admin-view-d
     AdminDashboardComponent,
     PatientDashboardComponent,
     PatientViewDashboardComponent,
-    AdminViewDashboardComponent
+    AdminViewDashboardComponent,
+    AdminViewAppointmentrequestsComponent,
+    AdminViewApprovedrequestsComponent,
+    AdminViewTodayappComponent,
+    AdminViewDoctorComponent,
+    AdminViewPatientComponent,
+    AdminViewBookingformComponent,
+    AdminViewCreatepatientComponent,
+    AdminViewCreatedoctorComponent,
+    AdminViewEditdoctorComponent,
+    AdminViewEditpatientComponent,
+    AdminViewRescheduleComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +85,7 @@ import { AdminViewDashboardComponent } from './admin-view-dashboard/admin-view-d
     BrowserAnimationsModule,
     FlexLayoutModule,
     MatCardModule,
+    MatChipsModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
@@ -75,7 +100,8 @@ import { AdminViewDashboardComponent } from './admin-view-dashboard/admin-view-d
     MatListModule,
     MatTableModule,
     MatPaginatorModule,
-    MatGridListModule
+    MatGridListModule,
+    MatTooltipModule
 
     
   ],

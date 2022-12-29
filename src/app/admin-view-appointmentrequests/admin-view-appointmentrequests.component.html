@@ -1,0 +1,76 @@
+
+  <div class="appointment" fxLayoutAlign="center center">
+    <mat-card fxFlex="85" >
+        <mat-card-header>
+          <mat-card-title>Appointment-Requests</mat-card-title>&nbsp;&nbsp; <button mat-mini-fab color="warn"><strong>{{rapps?.length}}</strong></button>
+          <mat-card-subtitle>Date : {{myDate | date:'dd-MM-yyyy'}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field>
+                <mat-label>QuickSearch</mat-label>
+                <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Chris" #input>
+              </mat-form-field>
+              
+              <div class="mat-elevation-z8">
+                <table mat-table [dataSource]="dataSource" matSort>
+
+                  <!-- <ng-container matColumnDef="S.No">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>S. No</th>
+                    <td mat-cell *matCellDef="let i=index"> {{i + 1}} </td>
+                  </ng-container> -->
+
+                  <ng-container matColumnDef="App. ID">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Ref. No.</th>
+                    <td mat-cell *matCellDef="let rapp"> {{rapp.id}} </td>
+                  </ng-container>
+              
+                  <ng-container matColumnDef="visiting_date">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Visiting-Date</th>
+                    <td mat-cell *matCellDef="let rapp"> {{rapp.visiting_date}} </td>
+                  </ng-container>
+              
+                  
+                  <ng-container matColumnDef="pname">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Patient Name</th>
+                    <td mat-cell *matCellDef="let rapp"> {{rapp.pname}} </td>
+                  </ng-container>
+              
+                  
+                  <ng-container matColumnDef="dname">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Doctor Name</th>
+                    <td mat-cell *matCellDef="let rapp"> Dr.{{rapp.dname}} </td>
+                  </ng-container>
+              
+                  
+                  <ng-container matColumnDef="reason">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Reason</th>
+                    <td mat-cell *matCellDef="let rapp"> {{rapp.reason}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="actions">
+                    <th mat-header-cell  *matHeaderCellDef> Actions </th>
+                    <td mat-cell *matCellDef="let rapp" >
+                         <!-- <button mat-button  (click)="approve(rapp.id)">Approve</button> -->
+                         <!-- <button mat-button (click)="reject(rapp.id)">Reject</button> -->
+                         <mat-icon class="check" [ngStyle]="{'color':'green'}" matTooltip="Approve" (click)="approve(rapp.id,rapp.pname)">check</mat-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                         <mat-icon class="reject" [ngStyle]="{'color':'red'}" matTooltip="Reject" (click)="reject(rapp.id,rapp.pname)"> cancel_presentation</mat-icon>
+                    </td>
+                
+                  </ng-container>
+              
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let rapp; columns: displayedColumns;"></tr>
+              
+                  
+                  <tr class="mat-row" *matNoDataRow>
+                    <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+                  </tr>
+                </table>
+              
+                <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+              </div>          
+    
+        </mat-card-content>
+      </mat-card>
+    
+      </div>

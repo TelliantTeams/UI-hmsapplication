@@ -1,3 +1,4 @@
+<!-- <div style="margin: 30px">
 <h2>DashBoard- Admin</h2>
 <hr color="white">
 <hr color="white">
@@ -37,14 +38,82 @@
         </mat-list>
     </mat-card>
     <mat-card>
-        <mat-list>
+        <mat-list >
             <mat-list-item>
                 <strong>Appointment Requests</strong>
                 <hr>
             </mat-list-item>
             <mat-list-item>
-                <h1>{{papps?.length}}</h1>
+                <h1 class="blink">{{papps?.length}}</h1>
             </mat-list-item>
         </mat-list>
     </mat-card>
-</div>
+     <button mat-raised-button color="primary" (click)="openForm()">Book An Appointment</button> -->
+<!-- </div>
+</div> --> 
+
+<!-- <mat-card class="example-card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+    <mat-card-header>
+      <mat-card-title style="text-align: center;"><mat-icon>person</mat-icon>Patients</mat-card-title>
+      <br>
+      <mat-card-subtitle style="text-align: center;"><h1>{{pcount}}</h1></mat-card-subtitle>
+    </mat-card-header>
+<mat-card-content>
+    <h1 style="text-align: center;">{{pcount}}</h1>
+</mat-card-content>
+  </mat-card> -->
+
+  <mat-card class="example-card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" >
+    <mat-card-header>
+      <mat-card-title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<mat-icon>person</mat-icon>Patients</mat-card-title>
+      <!-- <mat-card-subtitle>{{dcount}}</mat-card-subtitle> -->
+    </mat-card-header>
+<mat-card-content>
+    <h1 style="text-align: center;">{{pcount}}</h1>
+</mat-card-content>
+  </mat-card>
+
+
+  <mat-card class="example-card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" >
+    <mat-card-header>
+      <mat-card-title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<mat-icon>person</mat-icon>Doctors</mat-card-title>
+      <!-- <mat-card-subtitle>{{dcount}}</mat-card-subtitle> -->
+    </mat-card-header>
+<mat-card-content>
+    <h1 style="text-align: center;">{{dcount}}</h1>
+</mat-card-content>
+  </mat-card>
+
+
+  <mat-card class="example-card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" >
+    <mat-card-header>
+      <!-- <mat-card-title><mat-icon>assignment_turned_in</mat-icon>Today Appointments</mat-card-title> -->
+      <mat-card-subtitle class="tda"><mat-icon>assignment_turned_in</mat-icon>Today Appointments</mat-card-subtitle>
+    </mat-card-header>
+<mat-card-content>
+    <h1 style="text-align: center;">{{apps?.length}}</h1>
+</mat-card-content>
+  </mat-card>
+
+
+<!-- 
+  <mat-card class="example-card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" >
+    <mat-card-header>
+      <mat-card-title><mat-icon>assignment_turned_in</mat-icon></mat-card-title>
+      <mat-card-subtitle>Start</mat-card-subtitle>
+    </mat-card-header>
+<mat-card-content>   
+</mat-card-content>
+</mat-card> -->
+
+<mat-card class="example-card1" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" >
+    <mat-card-header>
+      <!-- <mat-card-title><mat-icon>assignment_late</mat-icon>Requests</mat-card-title> -->
+      <mat-card-subtitle class="ard"><mat-icon>assignment_late</mat-icon>Appointment Requests</mat-card-subtitle>
+    </mat-card-header>
+<mat-card-content> 
+    <h1 class="blink" style="text-align: center;">{{papps?.length}}</h1>  
+</mat-card-content>
+</mat-card>
+
+

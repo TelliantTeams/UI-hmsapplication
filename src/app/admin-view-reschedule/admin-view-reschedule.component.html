@@ -1,0 +1,53 @@
+<!-- <div fxLayoutAlign="center center" fxFlexFill class="main-div">
+
+
+    <mat-card  fxFlex="25"  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+    <mat-toolbar color="primary" style="justify-content:center; ">Reschedule</mat-toolbar>
+<br><br>
+
+<form [formGroup]="rschform" (ngSubmit)="submit()" fxLayoutAlign="strecth" fxLayout="column"  class="appointment-form" > 
+      
+        <mat-form-field appearance="outline" style="margin-bottom: -1.25em">
+            <mat-label>Visiting Date</mat-label>
+            <input matInput  [matDatepicker]="picker"  name="visiting_date" [(ngModel)]="Resche.visiting_date" formControlName="visiting_date">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        </form>
+           <hr>
+    
+        <div class="button">
+            <button mat-raised-button color="primary" type="submit" (click)="submit()">Update</button>
+            <button mat-raised-button color="warn" (click)="cancel()">Cancel</button>
+        </div>
+       <br>
+    </mat-card>
+
+</div> -->
+
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+<mat-card  fxFlex="25"  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+    <mat-toolbar color="primary" style="justify-content:center; ">Reschedule</mat-toolbar>
+<br><br>
+
+<form [formGroup]="rschform" (ngSubmit)="submit()" fxLayoutAlign="strecth" fxLayout="column"  class="appointment-form" > 
+      
+        <mat-form-field appearance="outline" style="margin-bottom: -1.25em">
+            <mat-label>Visiting Date</mat-label>
+            <input [(ngModel)]="Resche.visiting_date" matInput [matDatepicker]="picker" name="visiting date" placeholder="MM/DD/YYYY" formControlName="visiting_date">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        </form>
+           <hr>
+    
+        <div class="button">
+            <button mat-raised-button color="primary" type="submit" (click)="submit()">Update</button>
+            <button mat-raised-button color="warn" (click)="cancel()">Cancel</button>
+        </div>
+       <br>
+    </mat-card>
+
+</div>

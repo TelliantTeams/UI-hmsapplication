@@ -1,0 +1,112 @@
+ <!-- <div class="container">
+    <h1>P Profile Update</h1>
+
+    <form [formGroup]="pupdateform" (ngSubmit)="submit()">
+        <div class="form-group">
+            <label for="contact">Contact:</label>
+            <input formControlName="pcontact"
+            id="contact"
+            type="text" [(ngModel)]="Updatepatient.pcontact"
+            class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input formControlName="paddress"
+            id="address"
+            type="text" [(ngModel)]="Updatepatient.paddress"
+            class="form-control">
+        </div>
+
+        
+        <div class="form-group">
+            <label for="height">Height:</label>
+            <input formControlName="pheight"
+            id="height"
+            type="text" [(ngModel)]="Updatepatient.pheight"
+            class="form-control">
+        </div>
+
+          <div class="form-group">
+            <label for="weight">Weight:</label>
+            <input formControlName="pweight"
+            id="weight"
+            type="text" [(ngModel)]="Updatepatient.pweight"
+            class="form-control">
+        </div>
+
+         <div class="form-group">
+            <label for="bloodpressure">BloodPressure:</label>
+            <input formControlName="pbp"
+            id="bp"
+            type="text" [(ngModel)]="Updatepatient.pbp"
+            class="form-control">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Update</button>
+
+    </form>
+</div>  -->
+
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+
+
+    <mat-card  fxFlex="25"  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+    <mat-toolbar color="primary" style="justify-content:center; ">Update Patient Form</mat-toolbar>
+<br><br>
+
+    <form [formGroup]="pupdateform" (ngSubmit)="submit()" fxLayoutAlign="strecth" fxLayout="column"  class="appointment-form" > 
+      
+            <mat-form-field appearance="outline" style="margin-bottom: -1.25em">
+                <mat-label>Contact Number</mat-label>
+                <input matInput name="pcontact" [(ngModel)]="Updatepatient.pcontact" formControlName="pcontact">
+            </mat-form-field>
+           
+            <br>
+        
+
+            <mat-form-field appearance="outline" style="margin-bottom: -1.25em" >
+                <mat-label>Address</mat-label>
+                <input matInput name="paddress" [(ngModel)]="Updatepatient.paddress" formControlName="paddress">
+            </mat-form-field>
+           
+
+            <br>
+
+
+
+            <mat-form-field appearance="outline" style="margin-bottom: -1.25em">
+                <mat-label>Height</mat-label>
+                <input matInput name="pheight" [(ngModel)]="Updatepatient.pheight" formControlName="pheight">
+            </mat-form-field>
+            
+            <br>
+
+            <mat-form-field appearance="outline" style="margin-bottom: -1.25em">
+                <mat-label>Weight</mat-label>
+                <input matInput name="pweight" [(ngModel)]="Updatepatient.pweight" formControlName="pweight">
+            </mat-form-field>
+            
+            <br>
+
+            <mat-form-field appearance="outline" style="margin-bottom: -1.25em">
+                <mat-label>BP</mat-label>
+                <input matInput name="pbp" [(ngModel)]="Updatepatient.pbp" formControlName="pbp">
+            </mat-form-field>
+            
+            <br>
+
+        </form>
+
+ 
+            <hr>
+    
+        <div class="button">
+            <button mat-raised-button color="primary" type="submit"  (click)="submit()">Update</button>
+
+            <button mat-raised-button color="warn"  (click)="cancel()">Cancel</button>
+        </div>
+       <br>
+    </mat-card>
+
+</div>
