@@ -1,7 +1,12 @@
 
-<h2 style="text-align: center;">Registratison Suces</h2>
+<div class="confirmdialog">
+<h2 style="text-align: center;">Registration Sucess !</h2>
 
-<p> Hi {{username}} !</p>
-<p>Would You like to LOGIN</p>
+<h3 style="font-family: sans-serif;"> HI {{username}} </h3>
+<p style="font-family: sans-serif;">Would you like to LOGIN</p>
 
-<button></button>
+<div style="display: flex;; justify-content: space-evenly;">
+<button mat-raised-button color="primary" (click)="openLogin()" mat-dialog-close="true">Yes</button>
+<button mat-raised-button color="warn" mat-dialog-close>No</button>
+</div>
+</div>
