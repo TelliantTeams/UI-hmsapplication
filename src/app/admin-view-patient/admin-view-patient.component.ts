@@ -58,7 +58,18 @@ export class AdminViewPatientComponent {
 }
 
 openForm(){
+  console.log("dialogue opened!")
   this.dialog.open(AdminViewCreatepatientComponent,{width:'50%'});
 }
+
+// openForm(){
+//   this.dialog.open(AdminViewCreatepatientComponent, {
+//     maxWidth: '100vw',
+//     maxHeight: '100vh',
+//     height: '100%',
+//     width: '100%',
+//     panelClass: 'full-screen-modal'
+//   });
+// }
   
 }

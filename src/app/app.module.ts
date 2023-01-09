@@ -31,6 +31,7 @@ import { DoctorViewDashboardComponent } from './doctor-view-dashboard/doctor-vie
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatSelectModule} from '@angular/material/select';
 
 
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
@@ -48,6 +49,10 @@ import { AdminViewCreatedoctorComponent } from './admin-view-createdoctor/admin-
 import { AdminViewEditdoctorComponent } from './admin-view-editdoctor/admin-view-editdoctor.component';
 import { AdminViewEditpatientComponent } from './admin-view-editpatient/admin-view-editpatient.component';
 import { AdminViewRescheduleComponent } from './admin-view-reschedule/admin-view-reschedule.component';
+import { FxdesignComponent } from './fxdesign/fxdesign.component';
+import { MatMomentDateModule, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
+import { AdminViewNbookingformComponent } from './admin-view-nbookingform/admin-view-nbookingform.component';
+import { AdminViewNslotshowComponent } from './admin-view-nslotshow/admin-view-nslotshow.component';
 
 
 
@@ -75,7 +80,10 @@ import { AdminViewRescheduleComponent } from './admin-view-reschedule/admin-view
     AdminViewCreatedoctorComponent,
     AdminViewEditdoctorComponent,
     AdminViewEditpatientComponent,
-    AdminViewRescheduleComponent
+    AdminViewRescheduleComponent,
+    FxdesignComponent,
+    AdminViewNbookingformComponent,
+    AdminViewNslotshowComponent
   ],
   imports: [
     BrowserModule,
@@ -101,11 +109,13 @@ import { AdminViewRescheduleComponent } from './admin-view-reschedule/admin-view
     MatTableModule,
     MatPaginatorModule,
     MatGridListModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSelectModule,
+    MatMomentDateModule
 
     
   ],
-  providers: [],
+  providers: [ { provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: { useUtc: true } }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

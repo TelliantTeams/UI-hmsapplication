@@ -1,23 +1,29 @@
-.close-button{
+.example-button-row {
+    /* display: table-cell;
+    padding: 1cm;
+    align-items: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .close-button{
     float: right;
     
   }
 
 .main-div{
     padding: 0px;
-    padding:30px;
    
 }
 
 .appointment-form{
-    padding: 10px;
-    display: flex;
-    justify-content: center;  
+    padding: 20px;
+    
 }
 
 .my-app-form-field .mat-app-form-field-wrapper {
-   margin-bottom: -1.25%;
-   
+    margin-bottom: -1.25%;
 }
 
 .button{
@@ -35,5 +41,11 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
   }
+
+  .mat-mdc-dialog-container .mdc-dialog__surface{
+    box-shadow: none !important;
+    background-color: transparent  !important;
+}
+
 
 

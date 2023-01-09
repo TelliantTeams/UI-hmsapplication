@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #0D0D8B }
+
 .mat-mdc-dialog-container .mdc-dialog__surface{
     box-shadow: none !important;
     background-color: transparent  !important;

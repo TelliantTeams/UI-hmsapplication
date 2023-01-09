@@ -2,21 +2,21 @@
 <div fxLayoutAlign="center center" fxFlexFill class="main-div">
 
 
-    <mat-card  fxFlex="25"  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+<mat-card  fxFlex="25"  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
         <!-- <button mat-icon-button class="close-button" [mat-dialog-close]="true">
             <mat-icon class="close-icon" color="warn">close</mat-icon>
           </button> -->
-    <mat-toolbar color="primary" style="justify-content:center; ">Appointment Booking Form</mat-toolbar>
+<mat-toolbar color="primary" style="justify-content:center; ">Appointment Booking Form</mat-toolbar>
 <br><br>
 
-    <form [formGroup]="newappForm" #newappFrom fxLayoutAlign="strecth" fxLayout="column"  class="appointment-form" > 
+    <form [formGroup]="newbappForm" #newappFrom fxLayoutAlign="strecth" fxLayout="column"  class="appointment-form" > 
       
             <mat-form-field appearance="outline" style="margin-bottom: -1.25em">
-                <mat-label>Patient ID</mat-label>
-                <input matInput placeholder="Enter Patient ID" name="patient_id" formControlName="patient_id">
+            <mat-label>Patient ID</mat-label>
+            <input matInput placeholder="Enter Patient ID" name="patient_id" formControlName="patient_id">
             </mat-form-field>
-           <span style="color: red; font-size:small; font-style: italic; margin-left: 10px;" *ngIf="(myappForm.patient_id.touched || submitted) && myappForm.patient_id.errors?.['required']">
-                *Patient ID is mandatory
+            <span style="color: red; font-size:small; font-style: italic; margin-left: 10px;" *ngIf="(myappForm.patient_id.touched || submitted) && myappForm.patient_id.errors?.['required']">
+            *Patient ID is mandatory
             </span>
             <br>
         
@@ -32,56 +32,54 @@
 
 
             <mat-form-field>
-                <mat-label>Select a doctor</mat-label>
-                <mat-select formControlName="visiting_doctor_id"  placeholder="Select 
+            <mat-label>Select a doctor</mat-label>
+            <mat-select (click)="doctorsn()" formControlName="visiting_doctor_id"  placeholder="Select 
              Company" [(value)]="selected">
-                  <mat-option *ngFor="let doctor of doctors" 
+            <mat-option *ngFor="let doctor of doctors" 
               [value]="doctor.id">
-                    Dr. {{doctor.dname}}
-                  </mat-option>
-               </mat-select>
-             </mat-form-field>
+            Dr. {{doctor.dname}}
+            </mat-option>
+            </mat-select>
+            </mat-form-field>
             <!-- <span style="color: red; font-size:small; font-style: italic; margin-left: 10px;" *ngIf="(myappForm.doctor_id.touched || submitted) && myappForm.doctor_id.errors?.['pattern']"> -->
-
             <br>
 
 
 
-            <mat-form-field appearance="outline" style="margin-bottom: -1.25em">
-                <mat-label>Reason</mat-label>
-                <input matInput placeholder="Reason for visit" name="reason" formControlName="reason">
+            <!-- <mat-form-field appearance="outline" style="margin-bottom: -1.25em">
+            <mat-label>Reason</mat-label>
+            <input matInput placeholder="Reason for visit" name="reason" formControlName="reason">
             </mat-form-field>
             <span style="color: red; font-size:small; font-style: italic; margin-left: 10px;" *ngIf="(myappForm.reason.touched || submitted) && myappForm.reason.errors?.['required']">
-           
-                *Reason is mandatory
+            *Reason is mandatory
             </span>
-            <br>
+            <br> -->
 
       
 
             <mat-form-field appearance="outline" style="margin-bottom: -1.25em">
-                <mat-label>Visiting Date</mat-label>
-                <input matInput [matDatepicker]="picker" [min]="minDate" [max]="maxDate" placeholder="MM/DD/YYYY" name="visiting_date" formControlName="visiting_date">
-                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
+            <mat-label>Visiting Date</mat-label>
+            <input matInput [matDatepicker]="picker" [min]="minDate" [max]="maxDate" placeholder="MM/DD/YYYY" name="visiting_date" formControlName="visiting_date">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
             <span style="color: red; font-size:small; font-style: italic; margin-left: 10px;" *ngIf="(myappForm.visiting_date.touched || submitted) && myappForm.visiting_date.errors?.['required']">
-                *Visiting Date is Mandatory
+            *Visiting Date is Mandatory
             </span>
 
             
 
-        </form>
+    </form>
 
  
-            <hr>
+    <hr>
     
-        <div class="button">
-            <button mat-raised-button color="primary" type="submit" mat-dialog-close  (click)="onSubmit()">REGISTER</button>
-
+    <div class="button">
+            <button mat-raised-button color="primary" type="submit" mat-dialog-close (click)="onSubmit()">NEXT -></button>
             <button mat-raised-button color="warn" mat-dialog-close (click)="clearForm()">CANCEL</button>
-        </div>
-       <br>
+    </div>
+
+    <br>
     </mat-card>
 
 </div>

@@ -1,0 +1,32 @@
+ 
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+
+
+    <mat-card  fxFlex="25"  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+            <!-- <button mat-icon-button class="close-button" [mat-dialog-close]="true">
+                <mat-icon class="close-icon" color="warn">close</mat-icon>
+              </button> -->
+    <mat-toolbar color="primary" style="justify-content:center; ">Slot Availablity</mat-toolbar>
+    <br><br>
+     
+    <div class="example-button-row" style="padding: 10px;">
+        <button mat-raised-button (click)="raise()" [ngStyle]="{ 'background-color': (value ? 'red' : 'green') ,'color': 'white'}">Slot-1 | AVBL - {{this.s1}}</button>
+        <br>
+        <button mat-raised-button (click)="raise2()" [ngStyle]="{ 'background-color': (value ? 'red' : 'green') ,'color': 'white'}">Slot-2 | AVBL - {{this.s2}}</button>
+        <br>
+        <button mat-raised-button (click)="raise3()" [ngStyle]="{ 'background-color': (value ? 'red' : 'green') ,'color': 'white'}">Slot-3 | AVBL - {{this.s3}}</button>
+        <br>
+        <button mat-raised-button (click)="raise4()" [ngStyle]="{ 'background-color': (value ? 'red' : 'green') ,'color': 'white'}">Slot-4 | AVBL - {{this.s4}}</button>
+      
+      </div>
+      <br><br>
+        
+        <div class="button">
+                <button mat-raised-button color="warn" (click)="onSubmit()"><- BACK</button>
+                <button mat-raised-button color="primary" type="submit"> NEXT -></button>
+        </div>
+    
+        <br>
+        </mat-card>
+    
+    </div>

@@ -100,6 +100,10 @@ export class ApiService {
     console.log(data);
     return this.httpClient.post('http://localhost:8080/appointment/reschedule/'+id, data);
   }
+
+  public slot1(slot_id: any, visiting_date: any,visiting_doctor_id: any): Observable<any>{
+    return this.httpClient.get('http://localhost:8080/appointmentdup/count?visiting_date='+visiting_date+'&slot_id='+slot_id+'&visiting_doctor_id='+visiting_doctor_id)
+  }
   
 
 }

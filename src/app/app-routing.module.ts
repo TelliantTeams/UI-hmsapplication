@@ -10,12 +10,15 @@ import { AdminViewDashboardComponent } from './admin-view-dashboard/admin-view-d
 import { AdminViewDoctorComponent } from './admin-view-doctor/admin-view-doctor.component';
 import { AdminViewEditdoctorComponent } from './admin-view-editdoctor/admin-view-editdoctor.component';
 import { AdminViewEditpatientComponent } from './admin-view-editpatient/admin-view-editpatient.component';
+import { AdminViewNbookingformComponent } from './admin-view-nbookingform/admin-view-nbookingform.component';
+import { AdminViewNslotshowComponent } from './admin-view-nslotshow/admin-view-nslotshow.component';
 import { AdminViewPatientComponent } from './admin-view-patient/admin-view-patient.component';
 import { AdminViewRescheduleComponent } from './admin-view-reschedule/admin-view-reschedule.component';
 import { AdminViewTodayappComponent } from './admin-view-todayapp/admin-view-todayapp.component';
 import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
 import { DoctorViewAppointmentComponent } from './doctor-view-appointment/doctor-view-appointment.component';
 import { DoctorViewDashboardComponent } from './doctor-view-dashboard/doctor-view-dashboard.component';
+import { FxdesignComponent } from './fxdesign/fxdesign.component';
 import { LoginComponent } from './login/login.component';
 import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -56,8 +59,10 @@ const routes: Routes = [
   {path :'doctor-dashboard',component :DoctorDashboardComponent},
   {path :'admin-dashboard',component:AdminDashboardComponent},
   {path : 'editpatform/:id', component: AdminViewEditpatientComponent},
-  {path : 'reschedule/:id', component: AdminViewRescheduleComponent}
-
+  {path : 'reschedule/:id', component: AdminViewRescheduleComponent},
+  {path : 'flexlearn', component: FxdesignComponent},
+  {path : 'newbookingform', component: AdminViewNbookingformComponent},
+  {path : 'slotbooking', component: AdminViewNslotshowComponent}
 ];
 
 @NgModule({

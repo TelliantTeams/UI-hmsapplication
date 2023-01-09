@@ -1,29 +1,28 @@
+import { DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { ThemePalette } from '@angular/material/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 import { newapp } from '../models/newapp';
-import { DatePipe } from "@angular/common";
-
 
 @Component({
-  selector: 'app-admin-view-bookingform',
-  templateUrl: './admin-view-bookingform.component.html',
-  styleUrls: ['./admin-view-bookingform.component.css']
+  selector: 'app-admin-view-nbookingform',
+  templateUrl: './admin-view-nbookingform.component.html',
+  styleUrls: ['./admin-view-nbookingform.component.css']
 })
-export class AdminViewBookingformComponent {
- 
+export class AdminViewNbookingformComponent {
   color: ThemePalette = "primary";
   submitted = false;
   Newapp = new newapp();
   minDate = new Date();
   maxDate = new Date();
-  router: any;
   doctors: any;
   selected: string;
   pipe = new DatePipe('en-US');
+  
 
-  constructor(private apiService:ApiService,public builder: FormBuilder){
+  constructor(private apiService:ApiService,public builder: FormBuilder,public router: Router){
     this.minDate.setDate(this.minDate.getDate() + 1);
     this.maxDate.setDate(this.maxDate.getDate() + 15);
    
@@ -37,20 +36,22 @@ export class AdminViewBookingformComponent {
    }
 
    ngAfterViewInit(){
+    // this.getdoctors();
+   }
+
+   doctorsn(){
     this.getdoctors();
    }
 
-
-  newappForm=this.builder.group({
+  newbappForm=this.builder.group({
    patient_id: ['',Validators.required],
     visiting_doctor_id: ['',Validators.required],
-    reason:['',Validators.required],
     visiting_date:['',Validators.required]
 
   })
 
   get myappForm(){
-    return this.newappForm.controls;
+    return this.newbappForm.controls;
   }
 
   getdoctors(){
@@ -64,19 +65,21 @@ export class AdminViewBookingformComponent {
 
   onSubmit(){
     this.submitted=true;
-    
-    console.log(this.newappForm);
-    if (!this.newappForm.valid) {
+    console.log(this.newbappForm);
+    localStorage.setItem('visiting_date', JSON.stringify(this.newbappForm.value.visiting_date));
+    localStorage.setItem('visiting_doctor_id', JSON.stringify(this.newbappForm.value.visiting_doctor_id))
+    if (!this.newbappForm.valid) {
       alert('Please fill all the required fields !');
+      this.router.navigateByUrl('/slotbooking');
       
     
     } else {
-      this.apiService.newapp(this.newappForm).subscribe(res => {
-        this.newappForm.reset();
+      this.apiService.newapp(this.newbappForm).subscribe(res => {
+        this.newbappForm.reset();
         this.Newapp=res;
         console.log(res);
         alert('Appointment Booked Successfully!');
-        //this.router.navigateByUrl('admin-dashboard/dashboard');
+        this.router.navigateByUrl('/slotbooking');
              
      })
 
@@ -87,7 +90,7 @@ export class AdminViewBookingformComponent {
 
   clearForm(){
 
-    this.newappForm.reset();
+    this.newbappForm.reset();
     //this.router.navigateByUrl('admin-dashboard/dashboard');
   }
 

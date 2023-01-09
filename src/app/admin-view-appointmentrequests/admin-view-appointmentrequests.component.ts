@@ -16,7 +16,7 @@ export class AdminViewAppointmentrequestsComponent{
 
 
   myDate = new Date(); 
-
+  
  
   rapps: any;
   
@@ -33,7 +33,7 @@ export class AdminViewAppointmentrequestsComponent{
  
 
   constructor(private apiService: ApiService,private httpclient:HttpClient) {
-  
+    
   }
 
   
@@ -59,7 +59,7 @@ export class AdminViewAppointmentrequestsComponent{
     console.log(this.dataSource)
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
-  
+      console.log(this.rapps);
       
     });
    }
