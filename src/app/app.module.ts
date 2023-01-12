@@ -7,6 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatButtonToggleModule } 
+    from "@angular/material/button-toggle";
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
@@ -53,6 +55,7 @@ import { FxdesignComponent } from './fxdesign/fxdesign.component';
 import { MatMomentDateModule, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
 import { AdminViewNbookingformComponent } from './admin-view-nbookingform/admin-view-nbookingform.component';
 import { AdminViewNslotshowComponent } from './admin-view-nslotshow/admin-view-nslotshow.component';
+import { AdminViewNpaymentwindowComponent } from './admin-view-npaymentwindow/admin-view-npaymentwindow.component';
 
 
 
@@ -83,7 +86,8 @@ import { AdminViewNslotshowComponent } from './admin-view-nslotshow/admin-view-n
     AdminViewRescheduleComponent,
     FxdesignComponent,
     AdminViewNbookingformComponent,
-    AdminViewNslotshowComponent
+    AdminViewNslotshowComponent,
+    AdminViewNpaymentwindowComponent
   ],
   imports: [
     BrowserModule,
@@ -111,7 +115,8 @@ import { AdminViewNslotshowComponent } from './admin-view-nslotshow/admin-view-n
     MatGridListModule,
     MatTooltipModule,
     MatSelectModule,
-    MatMomentDateModule
+    MatMomentDateModule,
+    MatButtonToggleModule
 
     
   ],

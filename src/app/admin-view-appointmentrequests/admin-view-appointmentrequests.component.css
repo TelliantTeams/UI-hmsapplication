@@ -4,8 +4,14 @@ table {
   
   .mat-mdc-form-field {
     font-size: 14px;
-    width: 100%;
+    width: 20%;
   }
+
+  .iconm {
+    width: 1em;
+    height: 0.8em;
+    font-size: 18px;
+}
   
   /* td, th {
     width: 20%;

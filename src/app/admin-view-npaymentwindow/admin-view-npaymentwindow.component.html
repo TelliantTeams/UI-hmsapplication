@@ -1,0 +1,24 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+
+
+    <mat-card  fxFlex="25"  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+            <!-- <button mat-icon-button class="close-button" [mat-dialog-close]="true">
+                <mat-icon class="close-icon" color="warn">close</mat-icon>
+              </button> -->
+    <mat-toolbar color="primary" style="justify-content:center; ">Payment Section</mat-toolbar>
+    <br><br>
+     
+    <div class="example-button-row" style="padding: 10px;">
+      
+        <button class="pay" mat-raised-button (click)="makePayment(100)"> <span style="color:red">Rs.100</span><br>Pay using Creditcard<mat-icon>credit_card</mat-icon><br><br>(Powered by stripe payment)</button>
+        <br>
+        <button class="later" mat-raised-button (click)="paylater()">Paylater<mat-icon>watch_later</mat-icon></button>
+        <br>
+      
+      </div>
+      <br><br>
+        
+       
+        </mat-card>
+    
+    </div>

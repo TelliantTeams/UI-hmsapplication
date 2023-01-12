@@ -11,6 +11,7 @@ import { AdminViewDoctorComponent } from './admin-view-doctor/admin-view-doctor.
 import { AdminViewEditdoctorComponent } from './admin-view-editdoctor/admin-view-editdoctor.component';
 import { AdminViewEditpatientComponent } from './admin-view-editpatient/admin-view-editpatient.component';
 import { AdminViewNbookingformComponent } from './admin-view-nbookingform/admin-view-nbookingform.component';
+import { AdminViewNpaymentwindowComponent } from './admin-view-npaymentwindow/admin-view-npaymentwindow.component';
 import { AdminViewNslotshowComponent } from './admin-view-nslotshow/admin-view-nslotshow.component';
 import { AdminViewPatientComponent } from './admin-view-patient/admin-view-patient.component';
 import { AdminViewRescheduleComponent } from './admin-view-reschedule/admin-view-reschedule.component';
@@ -62,7 +63,8 @@ const routes: Routes = [
   {path : 'reschedule/:id', component: AdminViewRescheduleComponent},
   {path : 'flexlearn', component: FxdesignComponent},
   {path : 'newbookingform', component: AdminViewNbookingformComponent},
-  {path : 'slotbooking', component: AdminViewNslotshowComponent}
+  {path : 'slotbooking', component: AdminViewNslotshowComponent},
+  {path: 'paymentpage', component: AdminViewNpaymentwindowComponent}
 ];
 
 @NgModule({

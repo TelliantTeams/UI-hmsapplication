@@ -10,20 +10,21 @@
     <br><br>
      
     <div class="example-button-row" style="padding: 10px;">
-        <button mat-raised-button (click)="raise()" [ngStyle]="{ 'background-color': (value ? 'red' : 'green') ,'color': 'white'}">Slot-1 | AVBL - {{this.s1}}</button>
+      
+        <button id="slot" mat-raised-button [disabled]="this.s1 === 0" (click)="raise()" [ngStyle]="{ 'background-color': (value ? 'red' : 'green') ,'color': 'white'}">Slot-1 | AVBL - {{this.s1}}<br>Timing: 8AM-10AM</button>
         <br>
-        <button mat-raised-button (click)="raise2()" [ngStyle]="{ 'background-color': (value ? 'red' : 'green') ,'color': 'white'}">Slot-2 | AVBL - {{this.s2}}</button>
+        <button id="slot" mat-raised-button [disabled]="this.s2 === 0" (click)="raise2()" [ngStyle]="{ 'background-color': (value ? 'red' : 'green') ,'color': 'white'}">Slot-2 | AVBL - {{this.s2}}<br>Timing: 10AM-12PM</button>
         <br>
-        <button mat-raised-button (click)="raise3()" [ngStyle]="{ 'background-color': (value ? 'red' : 'green') ,'color': 'white'}">Slot-3 | AVBL - {{this.s3}}</button>
+        <button id="slot" mat-raised-button [disabled]="this.s3 === 0" (click)="raise3()" [ngStyle]="{ 'background-color': (value ? 'red' : 'green') ,'color': 'white'}">Slot-3 | AVBL - {{this.s3}}<br>Timing: 4PM-6PM</button>
         <br>
-        <button mat-raised-button (click)="raise4()" [ngStyle]="{ 'background-color': (value ? 'red' : 'green') ,'color': 'white'}">Slot-4 | AVBL - {{this.s4}}</button>
+        <button id="slot" mat-raised-button [disabled]="this.s4 === 0" (click)="raise4()" [ngStyle]="{ 'background-color': (value ? 'red' : 'green') ,'color': 'white'}">Slot-4 | AVBL - {{this.s4}}<br>Timing: 7PM-9PM</button>
       
       </div>
       <br><br>
         
         <div class="button">
-                <button mat-raised-button color="warn" (click)="onSubmit()"><- BACK</button>
-                <button mat-raised-button color="primary" type="submit"> NEXT -></button>
+                <button mat-raised-button color="warn" (click)="Back()"><- BACK</button>
+                <!-- <button mat-raised-button color="primary" type="submit" (click)="OnSubmit()">SUBMIT</button> -->
         </div>
     
         <br>

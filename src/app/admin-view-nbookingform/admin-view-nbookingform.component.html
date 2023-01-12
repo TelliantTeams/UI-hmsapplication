@@ -31,10 +31,9 @@
             </span> -->
 
 
-            <mat-form-field>
+            <mat-form-field appearance="outline">
             <mat-label>Select a doctor</mat-label>
-            <mat-select (click)="doctorsn()" formControlName="visiting_doctor_id"  placeholder="Select 
-             Company" [(value)]="selected">
+            <mat-select (click)="doctorsn()" formControlName="visiting_doctor_id"   [(value)]="selected">
             <mat-option *ngFor="let doctor of doctors" 
               [value]="doctor.id">
             Dr. {{doctor.dname}}
@@ -42,7 +41,7 @@
             </mat-select>
             </mat-form-field>
             <!-- <span style="color: red; font-size:small; font-style: italic; margin-left: 10px;" *ngIf="(myappForm.doctor_id.touched || submitted) && myappForm.doctor_id.errors?.['pattern']"> -->
-            <br>
+   
 
 
 
@@ -66,6 +65,16 @@
             <span style="color: red; font-size:small; font-style: italic; margin-left: 10px;" *ngIf="(myappForm.visiting_date.touched || submitted) && myappForm.visiting_date.errors?.['required']">
             *Visiting Date is Mandatory
             </span>
+<br>
+
+            <mat-form-field appearance="outline" style="margin-bottom: -1.25em">
+            <mat-label>Reason</mat-label>
+            <input matInput placeholder="Enter Patient ID" name="reason" formControlName="reason">
+            </mat-form-field>
+            <span style="color: red; font-size:small; font-style: italic; margin-left: 10px;" *ngIf="(myappForm.reason.touched || submitted) && myappForm.reason.errors?.['required']">
+            *Reason is mandatory
+            </span>
+           
 
             
 

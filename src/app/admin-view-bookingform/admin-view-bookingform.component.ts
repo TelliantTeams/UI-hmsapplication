@@ -45,7 +45,8 @@ export class AdminViewBookingformComponent {
    patient_id: ['',Validators.required],
     visiting_doctor_id: ['',Validators.required],
     reason:['',Validators.required],
-    visiting_date:['',Validators.required]
+    visiting_date:['',Validators.required],
+  
 
   })
 

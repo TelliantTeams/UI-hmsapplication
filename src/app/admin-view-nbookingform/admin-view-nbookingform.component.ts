@@ -46,7 +46,8 @@ export class AdminViewNbookingformComponent {
   newbappForm=this.builder.group({
    patient_id: ['',Validators.required],
     visiting_doctor_id: ['',Validators.required],
-    visiting_date:['',Validators.required]
+    visiting_date:['',Validators.required],
+    reason:['',Validators.required]
 
   })
 
@@ -66,11 +67,13 @@ export class AdminViewNbookingformComponent {
   onSubmit(){
     this.submitted=true;
     console.log(this.newbappForm);
+    localStorage.setItem('patient_id', JSON.stringify(this.newbappForm.value.patient_id));
     localStorage.setItem('visiting_date', JSON.stringify(this.newbappForm.value.visiting_date));
-    localStorage.setItem('visiting_doctor_id', JSON.stringify(this.newbappForm.value.visiting_doctor_id))
+    localStorage.setItem('visiting_doctor_id', JSON.stringify(this.newbappForm.value.visiting_doctor_id));
+    localStorage.setItem('reason', JSON.stringify(this.newbappForm.value.reason));
     if (!this.newbappForm.valid) {
       alert('Please fill all the required fields !');
-      this.router.navigateByUrl('/slotbooking');
+    
       
     
     } else {
@@ -78,9 +81,7 @@ export class AdminViewNbookingformComponent {
         this.newbappForm.reset();
         this.Newapp=res;
         console.log(res);
-        alert('Appointment Booked Successfully!');
-        this.router.navigateByUrl('/slotbooking');
-             
+        this.router.navigateByUrl('/slotbooking');            
      })
 
     }
